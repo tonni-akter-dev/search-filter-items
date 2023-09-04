@@ -41,10 +41,8 @@ export default function Component7() {
           <p className="title">Component title 7</p>
           <p>
             {open ? (
-            //   <RiArrowDropDownLine className="react_arrow rotate" />
               <i className="fas fa-angle-down rotate"></i>
             ) : (
-            //   <RiArrowDropDownLine className="" />
             <i className="fas fa-angle-down"></i>
             )}
           </p>

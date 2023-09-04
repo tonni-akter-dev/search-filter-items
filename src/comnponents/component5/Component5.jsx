@@ -1,23 +1,7 @@
 import React, { useState } from "react";
 import "./Component5.css";
-import { RiArrowDropDownLine } from "react-icons/ri";
-
-const options = [
-  "Option 1",
-  "Option 2",
-  "Option 3",
-  "Option 4",
-  "Option 5",
-  "Option 6",
-  "Option 7",
-  "Option 8",
-  "Option 9",
-];
-
 export default function Component5() {
   const [open, setOpen] = useState(false);
-  const [selectedItem, setSelectedItem] = useState([]);
-  const [searchText, setSearchText] = useState("");
   const [options, setOptions] = useState([
     "Option 1",
     "Option 2",
@@ -34,37 +18,15 @@ export default function Component5() {
     setOpen(!open);
   };
 
-  const handleSelect = (index) => (e) => {
-    let isChecked = e.target.checked;
-    const item = options[index]; //
-    const updatedSelectedItems = [...selectedItem];
-    if (isChecked) {
-      updatedSelectedItems.push(item);
-      isChecked = false;
-    } else {
-      const itemIndex = updatedSelectedItems.indexOf(item);
-      if (itemIndex !== -1) {
-        updatedSelectedItems.splice(itemIndex, 1);
-      }
-    }
-    const removedItems = options.filter((_, i) => i !== index); //
-    // console.log(removedItems);
-    setOptions(removedItems);
-    setSelectedItem(updatedSelectedItems);
-  };
-
-  const [newOp, setNewOp] = useState([]);
-
+  const [newOptions, setNewOptions] = useState([]);
   const handleFilter = (value) => {
-    const newAAA = options.filter((i) => i !== value);
-    setOptions(newAAA);
-
-    setNewOp((current) => [...current, value]);
+    const newArray = options.filter((i) => i !== value);
+    setOptions(newArray);
+    setNewOptions((current) => [...current, value]);
   };
 
   const handleSearch = (e) => {
     const searchText = e.target.value;
-    // console.log(searchText);
     const filteredOptions = options.filter((option) =>
       option.toLowerCase().includes(searchText.toLowerCase())
     );
@@ -77,13 +39,13 @@ export default function Component5() {
         <div onClick={handleOpen} className="heading">
           <p className="title">
             Component title 5{" "}
-            {newOp.length > 0 && <span>({newOp.length})</span>}
+            {newOptions.length > 0 && <span>({newOptions.length})</span>}
           </p>
           <p>
             {open ? (
               <i className="fas fa-angle-down rotate"></i>
             ) : (
-            <i className="fas fa-angle-down"></i>
+              <i className="fas fa-angle-down"></i>
             )}
           </p>
         </div>
@@ -92,13 +54,8 @@ export default function Component5() {
             {/* picked */}
             <div className="picked">
               <small style={{ textAlign: "left" }}>Picked</small>
-              {newOp.map((option, index) => (
+              {newOptions.map((option, index) => (
                 <div key={index} className="all_checkbox">
-                  {/*   <input
-                    checked
-                    type="checkbox"
-                    onChange={handleSelect(index)}
-                  /> */}
                   <div className="checkbox">
                     <div className="inner_box"></div>
                   </div>
@@ -106,7 +63,7 @@ export default function Component5() {
                 </div>
               ))}
             </div>
-            {/* // all element */}
+            {/*  all element */}
             <div className="search_container">
               <small>All</small>
               <div>
@@ -120,13 +77,6 @@ export default function Component5() {
                     className="all_checkbox"
                     onClick={() => handleFilter(option)}
                   >
-                    {/*     <input
-                      type="checkbox"
-                      checked = {false}
-                      // onChange={handleSelect(index)}
-                      onClick={()=>handleFilter(option)}
-                      className=""
-                    /> */}
                     <div className="checkbox">
                       <div className="inner_box"></div>
                     </div>

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { RiArrowDropDownLine } from "react-icons/ri";
 import "./Component6.css";
 export default function Component6() {
   const [open, setOpen] = useState(false);
@@ -8,8 +7,6 @@ export default function Component6() {
   const handleOpen = () => {
     setOpen(!open);
   };
-
-
   const decrementStartValue = () => {
     if (startValue<10) {
         return
@@ -38,11 +35,12 @@ export default function Component6() {
         </div>
         {open && (
           <ul className="ul_design">
-            <li>Lorem Ip</li>
+            <li>Lorem Ip </li>
             <li>
               <input
                 type="text"
-                className="text_input"
+                className="text_input "
+                style={{marginLeft:"5px"}}
                 value={startValue}
               />
             </li>

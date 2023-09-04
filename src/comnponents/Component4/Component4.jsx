@@ -14,7 +14,7 @@ export default function Component4() {
       newOptions.push(`Option ${i}`);
     }
     setOptions(newOptions);
-  }, [startValue,endValue]);
+  }, [startValue, endValue]);
 
   const handleOpen = () => {
     setOpen(!open);
@@ -38,11 +38,9 @@ export default function Component4() {
           <p className="title">Component title 4</p>
           <p>
             {open ? (
-            //   <RiArrowDropDownLine className="react_arrow rotate" />
               <i className="fas fa-angle-down rotate"></i>
             ) : (
-            //   <RiArrowDropDownLine className="" />
-            <i className="fas fa-angle-down"></i>
+              <i className="fas fa-angle-down"></i>
             )}
           </p>
         </div>
