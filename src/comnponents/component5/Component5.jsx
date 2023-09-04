@@ -80,11 +80,10 @@ export default function Component5() {
             {newOp.length > 0 && <span>({newOp.length})</span>}
           </p>
           <p>
-            {" "}
             {open ? (
-              <RiArrowDropDownLine className="react_arrow rotate" />
+              <i className="fas fa-angle-down rotate"></i>
             ) : (
-              <RiArrowDropDownLine className="" />
+            <i className="fas fa-angle-down"></i>
             )}
           </p>
         </div>
