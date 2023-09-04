@@ -53,19 +53,14 @@ export default function Component5() {
     setSelectedItem(updatedSelectedItems);
   };
 
+  const [newOp, setNewOp] = useState([]);
 
-  const [newOp, setNewOp]=useState([])
+  const handleFilter = (value) => {
+    const newAAA = options.filter((i) => i !== value);
+    setOptions(newAAA);
 
-  const handleFilter =(value)=>{
-
-    const newAAA = options.filter(i=>i!==value)
-    setOptions(newAAA)
-
-    setNewOp(current=>[...current,value])
-
-   
-  }
-
+    setNewOp((current) => [...current, value]);
+  };
 
   const handleSearch = (e) => {
     const searchText = e.target.value;
@@ -78,14 +73,20 @@ export default function Component5() {
   };
   return (
     <div>
-      <div className={`${!open ? "component_four":"component_full"}`}>
+      <div className={`${!open ? "component_four" : "component_full"}`}>
         <div onClick={handleOpen} className="heading">
           <p className="title">
             Component title 5{" "}
             {newOp.length > 0 && <span>({newOp.length})</span>}
           </p>
-<p>        {open? <RiArrowDropDownLine className="react_arrow rotate" /> : <RiArrowDropDownLine className="" /> }
-</p>
+          <p>
+            {" "}
+            {open ? (
+              <RiArrowDropDownLine className="react_arrow rotate" />
+            ) : (
+              <RiArrowDropDownLine className="" />
+            )}
+          </p>
         </div>
         {open && (
           <>
@@ -94,7 +95,14 @@ export default function Component5() {
               <small style={{ textAlign: "left" }}>Picked</small>
               {newOp.map((option, index) => (
                 <div key={index} className="all_checkbox">
-                  <input checked type="checkbox" onChange={handleSelect(index)} />
+                  {/*   <input
+                    checked
+                    type="checkbox"
+                    onChange={handleSelect(index)}
+                  /> */}
+                  <div className="checkbox">
+                    <div className="inner_box"></div>
+                  </div>
                   <span className="option_text_design">{option}</span>
                 </div>
               ))}
@@ -109,15 +117,21 @@ export default function Component5() {
                   onChange={handleSearch}
                 />
                 {options.map((option, index) => (
-                  <div className="all_checkbox">
-                    <input
+                  <div
+                    className="all_checkbox"
+                    onClick={() => handleFilter(option)}
+                  >
+                    {/*     <input
                       type="checkbox"
                       checked = {false}
                       // onChange={handleSelect(index)}
                       onClick={()=>handleFilter(option)}
                       className=""
-                    />
-                    <span className="option_text_design">{option}</span>
+                    /> */}
+                    <div className="checkbox">
+                      <div className="inner_box"></div>
+                    </div>
+                    <p className="option_text_design ">{option}</p>
                   </div>
                 ))}
               </div>
