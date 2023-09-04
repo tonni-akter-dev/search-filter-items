@@ -11,7 +11,9 @@
 
 }
 
-
+.rotate{
+    transform: rotate(180deg);
+}
 .card_design {
     width: 300px;
 

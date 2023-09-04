@@ -10,10 +10,12 @@ export default function Component4() {
   };
   return (
     <>
-      <div className={`${!open ? "component_four":"component_full"}`}>
+      <div className={`${!open ? "component_four" : "component_full"}`}>
         <div onClick={handleOpen} className="heading">
           <p className="title">Component title 4</p>
-          <RiArrowDropDownLine className="react_arrow" />
+          <p>
+            {open? <RiArrowDropDownLine className="react_arrow rotate" /> : <RiArrowDropDownLine className="" /> }
+          </p>
         </div>
         {open && (
           <div>

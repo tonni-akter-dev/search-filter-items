@@ -76,7 +76,6 @@ export default function Component5() {
     console.log(filteredOptions);
     setOptions(filteredOptions);
   };
-
   return (
     <div>
       <div className={`${!open ? "component_four":"component_full"}`}>
@@ -85,7 +84,8 @@ export default function Component5() {
             Component title 5{" "}
             {newOp.length > 0 && <span>({newOp.length})</span>}
           </p>
-          <RiArrowDropDownLine className="react_arrow" />
+<p>        {open? <RiArrowDropDownLine className="react_arrow rotate" /> : <RiArrowDropDownLine className="" /> }
+</p>
         </div>
         {open && (
           <>

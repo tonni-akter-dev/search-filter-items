@@ -83,3 +83,7 @@
 input[type=checkbox]{
 accent-color: #FFB849;;
 }
+
+.react_arrow{
+font-size: 20px !important;
+}
