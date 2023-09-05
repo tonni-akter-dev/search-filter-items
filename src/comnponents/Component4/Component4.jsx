@@ -35,7 +35,7 @@ export default function Component4() {
     <>
       <div className={`${!open ? "component_four" : "component_full_four"}`}>
         <div onClick={handleOpen} className="heading">
-          <p className="title">Component title 4</p>
+          <p className="title">Component Title 4</p>
           <p>
             {open ? (
               <i className="fas fa-angle-down rotate"></i>
@@ -71,11 +71,18 @@ export default function Component4() {
                   {optionsOpen ? (
                     <div>
                       {options.map((option) => (
-                        <option> {option}</option>
+                        <option> {option}  </option>
                       ))}
                     </div>
                   ) : (
-                    `Options`
+                    <p>
+                      Option 1 
+                      {optionsOpen ? (
+                        <i className="m-2 fas fa-angle-down rotate"></i>
+                      ) : (
+                        <i className="m-2 fas fa-angle-down"></i>
+                      )}
+                    </p>
                   )}
                 </div>
               </li>

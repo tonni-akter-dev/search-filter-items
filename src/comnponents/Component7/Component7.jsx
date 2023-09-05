@@ -35,13 +35,13 @@ export default function Component7() {
   ) : (
     <div className="dddddd">
       <small> DD / MM / YYYY</small>
-     {/*  <p>
-        {open ? (
+      <p>
+        {date ? (
+          <i className="fas fa-angle-up"></i>
+          ) : (
           <i className="fas fa-angle-down "></i>
-        ) : (
-          <i className="fas fa-angle-down rotate"></i>
         )}
-      </p> */}
+      </p>
     </div>
   );
 
@@ -49,7 +49,7 @@ export default function Component7() {
     <div>
       <div className={`${!open ? "component_four" : "component_full_seven"}`}>
         <div onClick={handleOpen} className="heading">
-          <p className="title">Component title 7</p>
+          <p className="title">Component Title 7</p>
           <p>
             {open ? (
               <i className="fas fa-angle-down rotate"></i>

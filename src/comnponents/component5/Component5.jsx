@@ -37,7 +37,7 @@ export default function Component5() {
       <div className={`${!open ? "component_four" : "component_full_five"}`}>
         <div onClick={handleOpen} className="heading">
           <p className="title">
-            Component title 5{" "}
+            Component Title 5{" "}
             {newOptions.length > 0 && <span>({newOptions.length})</span>}
           </p>
           <p>

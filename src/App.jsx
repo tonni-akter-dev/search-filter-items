@@ -6,12 +6,17 @@ import Component6 from "./comnponents/Component6/Component6";
 
 function App() {
   return (
-    <>
-      <h1>Search filter Components</h1>
+    <div className="container">
+      <h1 className="text-center">Search filter Components</h1>
       <div className="row">
         <div className="col">
           <Component4 />
         </div>
+        <div className="col">
+          <Component6 />
+        </div>
+      </div>
+      <div className="row">
         <div className="col">
           <Component5 />
         </div>
@@ -19,8 +24,7 @@ function App() {
           <Component7 />
         </div>
       </div>
-      <Component6 />
-    </>
+    </div>
   );
 }
 

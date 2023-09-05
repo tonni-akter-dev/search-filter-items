@@ -56,8 +56,11 @@
     /* 193.382% */
     padding: 11px;
     width: 300px !important;
+    gap: 3px;
 }
-
+.rotate{
+    transform: rotate(180deg);
+}
 .date_container span {
     color: #000;
     font-family: Montserrat;
@@ -81,11 +84,11 @@
     line-height: 27.073px;
     /* 193.382% */
 }
-
 .dddddd {
     display: flex;
     justify-content: space-between;
     align-items: center !important;
+gap: 4px;
 
 }
 
@@ -96,5 +99,4 @@
     font-style: normal;
     font-weight: 400;
     line-height: 27.073px;
-    /* 270.735% */
 }
