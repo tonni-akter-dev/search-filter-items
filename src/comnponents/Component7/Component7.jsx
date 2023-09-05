@@ -30,20 +30,31 @@ export default function Component7() {
     setShowTodayDate(!showTodayDate);
   };
 
-  const formattedDate = dateState
-    ? dateState.toLocaleDateString('en-GB')
-    : "DD/MM/YYYY";
+  const formattedDate = dateState ? (
+    dateState.toLocaleDateString("en-GB")
+  ) : (
+    <div className="dddddd">
+      <small> DD / MM / YYYY</small>
+     {/*  <p>
+        {open ? (
+          <i className="fas fa-angle-down "></i>
+        ) : (
+          <i className="fas fa-angle-down rotate"></i>
+        )}
+      </p> */}
+    </div>
+  );
 
   return (
     <div>
-      <div className={`${!open ? "component_four" : "component_full"}`}>
+      <div className={`${!open ? "component_four" : "component_full_seven"}`}>
         <div onClick={handleOpen} className="heading">
           <p className="title">Component title 7</p>
           <p>
             {open ? (
               <i className="fas fa-angle-down rotate"></i>
             ) : (
-            <i className="fas fa-angle-down"></i>
+              <i className="fas fa-angle-down"></i>
             )}
           </p>
         </div>
@@ -52,7 +63,7 @@ export default function Component7() {
             <div className="date_container">
               <span> Lorem Ipsum dolores sit</span>
               <div onClick={handleCalender} className="date_btn">
-              {formattedDate}
+                {formattedDate}
               </div>
             </div>
             {date && (

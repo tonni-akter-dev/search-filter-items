@@ -11,9 +11,10 @@
 
 }
 
-.rotate{
+.rotate {
     transform: rotate(180deg);
 }
+
 .card_design {
     width: 300px;
 
@@ -27,6 +28,13 @@
     display: flex !important;
     padding-left: 0px;
     list-style: none;
+    color: #000;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27.073px;
+    /* 225.612% */
 }
 
 .ul_design li {
@@ -41,12 +49,15 @@
 .ul_design input {
     width: 30px;
     height: 26px;
-    border: 1px solid #00000033;
-    border-radius: 8px;
-    margin: 3px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.20);
+    background: #FFF;
+    margin-left: 5px;
+    margin-right: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .component_icon a {
@@ -74,8 +85,30 @@
     border-radius: 10px;
     border: 1px solid rgba(0, 0, 0, 0.20);
     background: #FFF;
-    padding-left: 8px;
-    /* display: flex; */
+    /* padding-left: 8px; */
+}
+
+.component_full_four .heading {
+    padding: 9px 13px;
+}
+
+.component_full_four .ul_design{
+    padding-left: 10px;
+}
+.component_full_four {
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.20);
+    background: #FFF;
+    /* padding: 13px; */
+    margin: 50px auto;
+    max-width: 300px;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27.073px;
+    padding-left: 0px !important;
 }
 
 .heading {
@@ -88,6 +121,7 @@
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
+    /* padding: 9px 13px; */
     /* line-height: 27.073px; */
 
 }
@@ -98,10 +132,20 @@
 } */
 
 .options {
-    border: 1px solid grey;
-    margin-left: 3px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.20);
+    background: #FFF;
+    margin-left: 5px;
     padding: 3px;
-    border-radius: 8px;
+    border-radius: 10px;
+    color: #000;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27.073px;
+    /* 225.612% */
+    cursor:pointer;
 }
 
 /* ======================= */

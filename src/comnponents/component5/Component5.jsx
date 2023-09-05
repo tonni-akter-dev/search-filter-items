@@ -30,12 +30,11 @@ export default function Component5() {
     const filteredOptions = options.filter((option) =>
       option.toLowerCase().includes(searchText.toLowerCase())
     );
-    console.log(filteredOptions);
     setOptions(filteredOptions);
   };
   return (
-    <div>
-      <div className={`${!open ? "component_four" : "component_full"}`}>
+    <>
+      <div className={`${!open ? "component_four" : "component_full_five"}`}>
         <div onClick={handleOpen} className="heading">
           <p className="title">
             Component title 5{" "}
@@ -50,10 +49,20 @@ export default function Component5() {
           </p>
         </div>
         {open && (
-          <>
+          <div className="option_design">
             {/* picked */}
+            <input
+                  type="text"
+                  className="search_input"
+                  onChange={handleSearch}
+                />
             <div className="picked">
-              <small style={{ textAlign: "left" }}>Picked</small>
+              <small
+                style={{ textAlign: "left", marginBottom: "4px" }}
+                className="picked_heading"
+              >
+                Picked
+              </small>
               {newOptions.map((option, index) => (
                 <div key={index} className="all_checkbox">
                   <div className="checkbox">
@@ -64,17 +73,13 @@ export default function Component5() {
               ))}
             </div>
             {/*  all element */}
-            <div className="search_container">
-              <small>All</small>
+            <div className="search_container all_options">
+              <small className="all_heading">All</small>
               <div>
-                <input
-                  type="text"
-                  className="search_input"
-                  onChange={handleSearch}
-                />
-                {options.map((option, index) => (
+               
+                {options.map((option) => (
                   <div
-                    className="all_checkbox"
+                    className="all_checkbox all_options_hover"
                     onClick={() => handleFilter(option)}
                   >
                     <div className="checkbox">
@@ -85,9 +90,9 @@ export default function Component5() {
                 ))}
               </div>
             </div>
-          </>
+          </div>
         )}
       </div>
-    </div>
+    </>
   );
 }

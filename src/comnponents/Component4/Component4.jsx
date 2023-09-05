@@ -33,7 +33,7 @@ export default function Component4() {
 
   return (
     <>
-      <div className={`${!open ? "component_four" : "component_full"}`}>
+      <div className={`${!open ? "component_four" : "component_full_four"}`}>
         <div onClick={handleOpen} className="heading">
           <p className="title">Component title 4</p>
           <p>
@@ -47,7 +47,7 @@ export default function Component4() {
         {open && (
           <div>
             <ul className="ul_design">
-              <li>From</li>
+              <li>From </li>
               <li>
                 <input
                   type="text"
@@ -56,7 +56,7 @@ export default function Component4() {
                   onChange={handleStartInputChange}
                 />
               </li>
-              <li> to</li>
+              <li>to</li>
               <li>
                 <input
                   type="text"
@@ -65,7 +65,7 @@ export default function Component4() {
                   onChange={handleEndInputChange}
                 />
               </li>
-              <li> lorem</li>
+              <li>lorem</li>
               <li>
                 <div onClick={handleOptionsOpen} className="options">
                   {optionsOpen ? (
@@ -75,7 +75,7 @@ export default function Component4() {
                       ))}
                     </div>
                   ) : (
-                    "Option 1"
+                    `Options`
                   )}
                 </div>
               </li>
